@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import com.sun.source.tree.BreakTree;
+
 import java.util.Objects;
 
 public class Job {
@@ -93,5 +95,33 @@ public class Job {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+
+
+    @Override
+    public String toString() {
+
+//TASK 5: #4
+        if(name== null && employer == null && location == null && positionType == null && coreCompetency == null){
+            return "OOPS! This job does not seem to exist.";
+        }
+
+//TASK 5: #3
+        String Name =(name.isEmpty() ? "Data not available" : name);
+        String Employer =(employer.getValue().isEmpty() ? "Data not available" : employer.getValue());
+        String Location =(location.getValue().isEmpty() ? "Data not available" : location.getValue());
+        String PositionType = (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue());
+        String  CoreCompetency = (coreCompetency.getValue().isEmpty()? "Data not available": coreCompetency.getValue());
+
+// TASK 5: 1 & 2
+        return System.lineSeparator() +
+                "ID: " + getId() + System.lineSeparator() +
+                "Name: " + Name + System.lineSeparator() +
+                "Employer: " + Employer + System.lineSeparator() +
+                "Location: " + Location + System.lineSeparator() +
+                "Position Type: " + PositionType + System.lineSeparator() +
+                "Core Competency: " + CoreCompetency + System.lineSeparator();
+
     }
 }
