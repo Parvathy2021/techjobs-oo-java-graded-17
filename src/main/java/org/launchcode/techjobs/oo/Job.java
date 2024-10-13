@@ -108,7 +108,7 @@ public class Job {
         }
 
 //TASK 5: #3
-        String Name =(name.isEmpty() ? "Data not available" : name);
+        String Name = name.isEmpty() ? "Data not available" : name;
         String Employer =(employer.getValue().isEmpty() ? "Data not available" : employer.getValue());
         String Location =(location.getValue().isEmpty() ? "Data not available" : location.getValue());
         String PositionType = (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue());
